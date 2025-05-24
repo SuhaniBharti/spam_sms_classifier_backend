@@ -18,4 +18,9 @@ with open(model_path, "rb") as file:
     model = pickle.load(file)
 
 def predict_message(text: str) -> str:
-    return model.predict([text])[0]
+    pred = model.predict([text])[0]
+    if pred == 1:
+        return "Spam"
+    else:
+        return "Ham"
+
