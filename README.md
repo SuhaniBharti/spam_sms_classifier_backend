@@ -1,5 +1,7 @@
 #  SMS Spam Classifier Backend (FastAPI)
 
+[live link - https://spamdetection-gamma.vercel.app ]
+
 This is a **FastAPI backend** for a machine learning model that classifies SMS messages as **Spam** or **Ham** (not spam). It exposes a `/predict` endpoint that receives a message and returns the classification result. This backend can be easily connected with a **React frontend**.
 
 ---
