@@ -15,6 +15,10 @@ app = FastAPI()
 origins = [
     "http://localhost:5173", 
     "https://spamdetection-gamma.vercel.app",  
+     "exp://*",             
+    "http://*",           
+    "https://*",           
+    "null" 
 ]
 app.add_middleware(
     CORSMiddleware,
