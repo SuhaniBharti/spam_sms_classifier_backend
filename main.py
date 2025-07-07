@@ -12,17 +12,17 @@ from app.predict import predict_message
 app = FastAPI()
 
 
-origins = [
-    "http://localhost:5173", 
-    "https://spamdetection-gamma.vercel.app",  
-     "exp://*",             
-    "http://*",           
-    "https://*",           
-    "null" 
-]
+# origins = [
+#     "http://localhost:5173", 
+#     "https://spamdetection-gamma.vercel.app",  
+#      "exp://*",             
+#     "http://*",           
+#     "https://*",           
+#     "null" 
+# ]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  
+   allow_origin_regex=".*", 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
